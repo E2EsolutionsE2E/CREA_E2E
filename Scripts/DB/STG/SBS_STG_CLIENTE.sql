@@ -1,3 +1,5 @@
+--PRUEBA DE CAMBIO --
+
 TRUNCATE sbs_stg_cliente;
 
 @@@
