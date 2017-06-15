@@ -1,0 +1,68 @@
+AVCCCO,Avance de CtaCte,CTCT,Cuenta Corriente,C,Consumo,C,CREDITO,SALDO
+SGCCCO,SobreGiro de CtaCte,CTCT,Cuenta Corriente,C,Consumo,C,CREDITO,SALDO
+SALDTC,Saldo de TC,TCRD,Tarjeta de  Credito,C,Consumo,C,CREDITO,SALDO
+CDEUTC,Compra de Deuda y Otros TC,TCRD,Tarjeta de  Credito,C,Consumo,C,CREDITO,SALDO
+DEFETC,Disposicion de Efectivo TC,TCRD,Tarjeta de  Credito,C,Consumo,C,CREDITO,SALDO
+PTMLDI,Prestamo Libre Disponibilidad,PTMO,Prestamos,C,Consumo,C,CREDITO,SALDO
+PTMVEH,Prestamo Vehicular,PTMO,Prestamos,C,Consumo,C,CREDITO,SALDO
+PTMPIG,Pignoraticio,CRED,Creditos,C,Consumo,C,CREDITO,SALDO
+PTMOTR,Otros Prestamos,PTMO,Prestamos,C,Consumo,C,CREDITO,SALDO
+PTMESP,Prestamos Especiales,PTMO,Prestamos,C,Consumo,C,CREDITO,SALDO
+CRDOTR,Otros Creditos,OCRD,Creditos,C,Consumo,C,CREDITO,SALDO
+HIPMIV,Hipotecario MiVivienda,HIPO,Hipotecario,H,Hipotecario,C,CREDITO,SALDO
+HIPTCH,Hipotecario TechoPropio,HIPO,Hipotecario,H,Hipotecario,C,CREDITO,SALDO
+HIPTRD,Hipotacario Tradicional,HIPO,Hipotecario,H,Hipotecario,C,CREDITO,SALDO
+PTMMIC,Prestamo MicroEmpresa,CMIC,Credito MicroEmpresa,P,PYME,C,CREDITO,SALDO
+TCEMIC,TC MicroEmpresa,CMIC,Credito MicroEmpresa,P,PYME,C,CREDITO,SALDO
+PTMPEQ,Prestamo Pequeña Empresa,CPEQ,Credito Pequeña Empresa,P,PYME,C,CREDITO,SALDO
+TCEPEQ,TC Pequeña Empresa,CPEQ,Credito Pequeña Empresa,P,PYME,C,CREDITO,SALDO
+PTMMED,Prestamo Mediana Empresa,CMED,Credito Mediana Empresa,P,PYME,C,CREDITO,SALDO
+TCEMED,TC Mediana Empresa,CMED,Credito Mediana Empresa,P,PYME,C,CREDITO,SALDO
+AVCCEM,Avance de CtaCte,CTCT,Cuenta Corriente,E,Empresas,C,CREDITO,SALDO
+SGCCEM,SobreGiro de CtaCte,CTCT,Cuenta Corriente,E,Empresas,C,CREDITO,SALDO
+LEASEN,Leasing,LESN,Leasing,E,Empresas,C,CREDITO,SALDO
+INMOB,Inmobiliario,LESN,Inmobiliario,E,Empresas,C,CREDITO,SALDO
+ARREFI,Arrendamiento Dinanciero,ARRE,Arrendamiento Dinanciero,E,Empresas,C,CREDITO,SALDO
+COMEXT,Comercio Exterior,COMX,Comercio Exterior,E,Empresas,C,CREDITO,SALDO
+PTMEMP,Prestamo Empresas,PEMP,Prestamo Empresas,E,Empresas,C,CREDITO,SALDO
+FACTOR,Factoring,FCTR,Factoring,E,Empresas,C,CREDITO,SALDO
+DSCLET,Letras,DSCT,Descuentos,E,Empresas,C,CREDITO,SALDO
+DSCPAG,Pagares,DSCT,Descuentos,E,Empresas,C,CREDITO,SALDO
+DSCDSC,Descuentos,DSCT,Descuentos,E,Empresas,C,CREDITO,SALDO
+GRNSPF,Garantia Preferida,GRNT,Garantias,G,Garantias,G,GARANTIA,SALDO
+GRNNPF,Garantia No Preferida,GRNT,Garantias,G,Garantias,G,GARANTIA,SALDO
+GRNHIP,Garantia Hipotecaria,GRNT,Garantias,G,Garantias,G,GARANTIA,SALDO
+LINTOT,Linea Total de TC,TCRD,Tarjeta de  Credito,C,Consumo,CA,CONTINGENTE ACREEDOR,LINEA
+LINDTC,Linea Disponible de TC,TCRD,Tarjeta de  Credito,C,Consumo,CA,CONTINGENTE ACREEDOR,LINEA
+LINDCC,Linea de Cuenta Corriente,CTCT,Cuenta Corriente,C,Consumo,CA,CONTINGENTE ACREEDOR,LINEA
+LINPTM,Linea de Prestamos,PTMO,Prestamos,C,Consumo,CA,CONTINGENTE ACREEDOR,LINEA
+LINMIC,Linea de Prestamos Micro,CMIC,Credito MicroEmpresa,P,PYME,CA,CONTINGENTE ACREEDOR,LINEA
+LINPEQ,Linea de Prestamos Pequeña,CPEQ,Credito Pequeña Empresa,P,PYME,CA,CONTINGENTE ACREEDOR,LINEA
+LINMED,Linea de Prestamos Mediana,CMED,Credito Mediana Empresa,P,PYME,CA,CONTINGENTE ACREEDOR,LINEA
+LINEMP,Linea de Prestamos Empresa,PTMO,Prestamos,E,Empresas,CA,CONTINGENTE ACREEDOR,LINEA
+LINAVA,Linea de Avales,AVFI,Avales y Fianzas,E,Empresas,CA,CONTINGENTE ACREEDOR,LINEA
+LINCCRD,Linea de Cartas de Credito,CCRD,Carta de Credito,E,Empresas,CA,CONTINGENTE ACREEDOR,LINEA
+PNOPTM,Prestamos no Otorgados Consumo,PTMO,Prestamos,C,Consumo,CA,CONTINGENTE ACREEDOR,PNO
+PNOMIC,Prestamos No Otorgados Micro,CMIC,Credito MicroEmpresa,P,PYME,CA,CONTINGENTE ACREEDOR,PNO
+PNOPEQ,Prestamos No Otorgados Pequeña,MPEQ,Credito Pequeña Empresa,P,PYME,CA,CONTINGENTE ACREEDOR,PNO
+PNOMED,Prestamos No Otorgados Mediana,CMED,Credito Mediana Empresa,P,PYME,CA,CONTINGENTE ACREEDOR,PNO
+PNOEMP,Prestamos No Otorgados Empresa,PTMO,Prestamos,E,Empresas,CA,CONTINGENTE ACREEDOR,PNO
+PNOHIP,Hipotecarios No Otorgados,HIPO,Hipotecario,E,Empresas,CA,CONTINGENTE ACREEDOR,PNO
+AVALES,Aval,AVFI,Avales y Fianzas,E,Empresas,CD,CONTINGENTE DEUDOR,AVAL
+CTAFIN,Carta Fianza,AVFI,Avales y Fianzas,E,Empresas,CD,CONTINGENTE DEUDOR,AVAL
+CARCRD,Carta Credito,CCRD,Carta de Credito,E,Empresas,CD,CONTINGENTE DEUDOR,AVAL
+ACEBAN,Aceptacion Bancaria,ACBN,Aceptacion Bancaria,E,Empresas,CD,CONTINGENTE DEUDOR,AVAL
+CSTGOG,Credito Castigado Cobrandose,CSTG,Credito Castigado,Q,Castigo,CD,CONTINGENTE DEUDOR,LINEA
+CSTGST,Credito Castigado,CSTG,Credito Castigado,Q,Castigo,CD,CONTINGENTE DEUDOR,LINEA
+PRVCON,Provision Consumo,PROV,Provision,C,Consumo,C,CREDITO,SALDO
+PRVMIC,Provision Micro Empresa,PROV,Provision,P,PYME,C,CREDITO,SALDO
+PRVPEQ,Provision Pequeña Empresa,PROV,Provision,P,PYME,C,CREDITO,SALDO
+PRVMED,Provision Mediana Empresa,PROV,Provision,P,PYME,C,CREDITO,SALDO
+PRVEMP,Provision Empresas,PROV,Provision,E,Empresas,C,CREDITO,SALDO
+PRVHIP,Provision Hipotecario,PROV,Provision,H,Hipotecario,C,CREDITO,SALDO
+INTCON,Interes Consumo,INTR,Interes,C,Consumo,C,CREDITO,SALDO
+INTMIC,Interes Micro Empresa,INTR,Interes,P,PYME,C,CREDITO,SALDO
+INTPEQ,Interes Pequeña Empresa,INTR,Interes,P,PYME,C,CREDITO,SALDO
+INTMED,Interes Mediana Empresa,INTR,Interes,P,PYME,C,CREDITO,SALDO
+INTEMP,Interes Empresas,INTR,Interes,E,Empresas,C,CREDITO,SALDO
+INTHIP,Interes Hipotecario,INTR,Interes,H,Hipotecario,C,CREDITO,SALDO
