@@ -1,0 +1,5 @@
+COPY sbs_stg_saldo FROM 'D:\rcc\saldos_20160131.csv' DELIMITER ',' CSV HEADER;
+
+COPY sbs_stg_cliente FROM 'D:\rcc\clientes_20160131.csv' DELIMITER ',' CSV HEADER;
+
+COPY sbs_ods_producto FROM 'f:\temp\ODS_PRODUCTO.csv' DELIMITER ',' CSV HEADER;
