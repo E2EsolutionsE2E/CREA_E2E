@@ -1,3 +1,7 @@
+TRUNCATE SBS_ODS_CLIENTE;
+
+@@@
+
 INSERT INTO SBS_ODS_CLIENTE
 SELECT
 to_number(to_char(TO_DATE(fec_reporte, 'YYYYMMDD'),'yyyymm'),'999999') as COD_PERIODO,
