@@ -2,10 +2,16 @@
 --PERIODO ACTUAL 201612
 -- inicio el calculo aquellos registros que no estan en el periodo
 DROP TABLE ACTUALIZAR;
+
+@@@
+
 create table ACTUALIZAR
+(
   a_cod_cliente_sbs   NUMERIC(18,2) ,
   flag   varchar(1) --0 
 );
+
+@@@
 
 INSERT INTO  ACTUALIZAR
 --CON ESTE QUERY IDENTIFICO A LOS QUE SE DEBEN ACTUALIZAR CON LA INFORMACION DEL PERIODO(0) Y LOS QUE NO APARECEN EN EL PERIODO ACTUAL(1)
@@ -21,8 +27,11 @@ case when b.cod_cliente_sbs is null then 1 else 0 end as flag,--
 b.cod_periodo
 FROM SBS_DIM_CLIENTE A
 left  outer JOIN sbs_fact_cliente B ON a.COD_CLIENTE_SBS = b.COD_CLIENTE_SBS
-and b.cod_periodo=201612) as princ; --el periodo se modifica????
---*******
+and b.cod_periodo=@@p_cod_periodo@@) as princ; --el periodo se modifica???? 201612 mes actual
+
+@@@
+
+/*
 select * from sbs_fact_cliente 
 select * from sbs_dim_cliente
 select * from ACTUALIZAR where flag='1';
@@ -54,11 +63,13 @@ truncate table sbs_fact_cliente;
 truncate table sbs_dim_cliente;
 
 ---fin para identificar a los codigos que no vinieron en el presente periodo
---*******
-
+*/
 --SBS_DIM_CLIENTE
 --PASO 1, CREAR UN TEMPORAL PARA HACER UNA TABLA MAESTRA
 DROP TABLE TP_SBS_DIM_CLIENTE;
+
+@@@
+
 CREATE TABLE TP_SBS_DIM_CLIENTE
 ( 
 	COD_CLIENTE_SBS    NUMBER   NOT NULL ,
@@ -103,7 +114,8 @@ CREATE TABLE TP_SBS_DIM_CLIENTE
 	TIP_MUNDO_PMM      char(18)  NULL ,
 	TIP_MUNDO_HIP      char(18)  NULL
 );
---- para insertar 
+
+@@@
 
 INSERT INTO TP_SBS_DIM_CLIENTE
 SELECT * -- o mencionar todos los campos 
@@ -113,14 +125,20 @@ WHERE A.COD_CLIENTE_SBS = B.COD_CLIENTE_SBS AND B.FLAG = 1;
 --desde aqui ya empiezo a calcular la dim_cliente si el codigo_sbs vino en el periodo actual
 --PASO 2 TEMPORAL PARA IDENTIFICAR COD_PERIODO_ULT
 ------------------------------------------------------
+@@@
 
 DROP TABLE TP_DIM_CLI_COD_PER_ULT;
+
+@@@
+
 create table TP_DIM_CLI_COD_PER_ULT
 (
   cod_cliente_sbs   NUMERIC(18,2) not null,
   maxperiodo    NUMERIC(18,2),
   minperiodo    NUMERIC(18,2)
 );
+
+@@@
 
 INSERT INTO  TP_DIM_CLI_COD_PER_ULT
 SELECT SBS_FACT_SALDO.COD_CLIENTE_SBS,MAX(SBS_FACT_SALDO.COD_PERIODO) AS MAXPERIODO, MIN(SBS_FACT_SALDO.COD_PERIODO) AS MINPERIODO
@@ -131,14 +149,21 @@ WHERE A.COD_CLIENTE_SBS
 GROUP BY SBS_FACT_SALDO.COD_CLIENTE_SBS
 ORDER BY SBS_FACT_SALDO.COD_CLIENTE_SBS;
 
-
+@@@--para pasar a otra sentencia espacio entre cada 
 -- PASO 3 TEMPORAL PARA IDENTIFICAR EL CAMPO CNT_CPPDDP_3M ;
-DROP TABLE TP_DIM_CLI_CNT_CPP_3M
+
+DROP TABLE TP_DIM_CLI_CNT_CPP_3M;
+
+@@@
+
 create table TP_DIM_CLI_CNT_CPP_3M
 (
   cod_cliente_sbs NUMERIC(18,2) not null,
   CNT_CPPDDP_3M numeric(20)
 );
+
+@@@
+
 insert into TP_DIM_CLI_CNT_CPP_3M
 select cod_cliente_sbs, sum(cantidad) as CNT_CPPDDP_3M 
 from 
@@ -148,19 +173,26 @@ from
                por_saldo_deuda_tip3+
                por_saldo_deuda_tip4)>0 THEN 1 ELSE NULL END cantidad
     from sbs_ods_cliente 
-    WHERE COD_PERIODO >=201511
+    WHERE COD_PERIODO >=@@p_num_3_meses@@ --para periodo en duro anterior 201511
 ) tmp_sal_deud_tip
 group by cod_cliente_sbs
 ORDER by cod_cliente_sbs; 
 
 -- PASO 4 TEMPORAL PARA IDENTIFICAR EL CAMPO CNT_DDP_24M 
+@@@
 
 DROP TABLE TP_DIM_CLI_CNT_DDP_24M;
+
+@@@
+
 create table TP_DIM_CLI_CNT_DDP_24M
 (
   cod_cliente_sbs NUMERIC(18,2) not null,
   CNT_DDP_24M numeric(20)
 );
+
+@@@
+
 insert into TP_DIM_CLI_CNT_DDP_24M
 select cod_cliente_sbs, sum(cantidad) as CNT_DDP_24M 
 from 
@@ -169,19 +201,26 @@ from
                por_saldo_deuda_tip3+
                por_saldo_deuda_tip4)>0 THEN 1 ELSE NULL END cantidad
     from sbs_ods_cliente 
-    WHERE COD_PERIODO >=201401
+    WHERE COD_PERIODO >= @@p_num_24_meses@@ --201401 ---
 ) tmp_sal_deud_tip
 group by cod_cliente_sbs
-ORDER by cod_cliente_sbs; 
+ORDER by cod_cliente_sbs;
+
+@@@ 
 
 -- PASO 5 TEMPORAL PARA IDENTIFICAR EL CAMPO CNT_NORMAL_12M 
-
 DROP TABLE TP_DIM_CLI_CNT_NOR_12M;
+
+@@@
+
 create table TP_DIM_CLI_CNT_NOR_12M
 (
   cod_cliente_sbs NUMERIC(18,2) not null,
   CNT_NOR_12M numeric(20)
 );
+
+@@@
+
 insert into TP_DIM_CLI_CNT_NOR_12M
 select cod_cliente_sbs, sum(cantidad) as CNT_NOR_12M 
 from 
@@ -189,20 +228,26 @@ from
     case when por_saldo_deuda_tip0=100
          THEN 1 ELSE NULL END cantidad
     from sbs_ods_cliente 
-    WHERE COD_PERIODO >=201501
+    WHERE COD_PERIODO >= @@p_num_12_meses@@ --201501
 ) tmp_sal_deud_tip
 group by cod_cliente_sbs
-ORDER by cod_cliente_sbs; 
+ORDER by cod_cliente_sbs;
+
+@@@ 
 
 --PASO 6 TEMPORAL PARA IDENTIFICAR FLG_GARANTIA
 ------------------------------------------------------
-
 DROP TABLE TP_DIM_CLI_FLG_GAR;
+
+@@@
+
 create table TP_DIM_CLI_FLG_GAR
 (
   cod_cliente_sbs   NUMERIC(18,2) not null,
   maxperiodo    NUMERIC(18,2)
 );
+
+@@@
 
 INSERT INTO  TP_DIM_CLI_FLG_GAR
 SELECT SBS_FACT_SALDO.COD_CLIENTE_SBS,MAX(SBS_FACT_SALDO.COD_PERIODO) AS MAXPERIODO
@@ -212,15 +257,21 @@ AND sbs_ods_producto.Flg_producto = 'GARANTIA'
 GROUP BY SBS_FACT_SALDO.COD_CLIENTE_SBS
 ORDER BY SBS_FACT_SALDO.COD_CLIENTE_SBS;
 
+@@@
 --PASO 7 TEMPORAL PARA IDENTIFICAR FLG_SALDO_PMM_24M
 ------------------------------------------------------
 
 DROP TABLE TP_DIM_CLI_FLG_SAL_PMM_24M;
+
+@@@
+
 create table TP_DIM_CLI_FLG_SAL_PMM_24M
 (
   cod_cliente_sbs   NUMERIC(18,2) not null,
   CNT_FLG_SAL_PMM_24M numeric(20)  
 );
+
+@@@
 
 INSERT INTO  TP_DIM_CLI_FLG_SAL_PMM_24M
 SELECT COD_CLIENTE_SBS, SUM(CANTIDAD) AS FLG_SALDO_PMM_24M 
@@ -230,68 +281,96 @@ FROM
     FROM SBS_FACT_SALDO 
     JOIN sbs_ods_producto ON SBS_FACT_SALDO.cod_subproducto = sbs_ods_producto.cod_subproducto 
     AND sbs_ods_producto.Flg_producto IN( 'MED','PEQ','MICRO') and  DES_TIPPRODUCTO='SALDO'
-    WHERE COD_PERIODO >= 201401
+    WHERE COD_PERIODO >= @@p_num_24_meses@@ --201401 --- meses anteriores
     GROUP BY SBS_FACT_SALDO.COD_CLIENTE_SBS
 ) TMP_FLG_GAR
 GROUP BY COD_CLIENTE_SBS
 ORDER BY COD_CLIENTE_SBS;
 
+@@@
 --PASO 8 TEMPORAL PARA IDENTIFICAR MTO_SALDO_PP_MAX_24M
+
 DROP TABLE TP_DIM_CLI_MTO_SAL_PP_MAX_24M;
+
+@@@
+
 create table TP_DIM_CLI_MTO_SAL_PP_MAX_24M
 (
   cod_cliente_sbs NUMERIC(18,2) not null,
   saldo         NUMERIC(18,2)
  );
+
+@@@
+
  INSERT INTO TP_DIM_CLI_MTO_SAL_PP_MAX_24M
  SELECT SBS_FACT_SALDO.COD_CLIENTE_SBS, MAX(SBS_FACT_SALDO.MTO_SALDO) AS MTO_SALDO
  FROM SBS_FACT_SALDO
  JOIN sbs_ods_producto ON SBS_FACT_SALDO.cod_subproducto = sbs_ods_producto.cod_subproducto 
  AND sbs_ods_producto.Flg_producto ='PRESTAMO' and  DES_TIPPRODUCTO='SALDO'
- WHERE SBS_FACT_SALDO.COD_PERIODO >=201401
+ WHERE SBS_FACT_SALDO.COD_PERIODO >=@@p_num_24_meses@@-- 201401
  GROUP BY SBS_FACT_SALDO.COD_CLIENTE_SBS
  ORDER BY SBS_FACT_SALDO.COD_CLIENTE_SBS;
- 
+
+@@@ 
  --PASO 9 TEMPORAL PARA IDENTIFICAR MTO_LINEATC_MAX_24M  
+
 DROP TABLE TP_DIM_CLI_MTO_LIN_TC_MAX_24M;
+
+@@@
+
 create table TP_DIM_CLI_MTO_LIN_TC_MAX_24M
 (
   cod_cliente_sbs NUMERIC(18,2) not null,
   saldo         NUMERIC(18,2)
  );
+
+@@@
+
  INSERT INTO TP_DIM_CLI_MTO_LIN_TC_MAX_24M
  SELECT SBS_FACT_SALDO.COD_CLIENTE_SBS, MAX(SBS_FACT_SALDO.MTO_SALDO) AS MTO_SALDO
  FROM SBS_FACT_SALDO
  JOIN sbs_ods_producto ON SBS_FACT_SALDO.cod_subproducto = sbs_ods_producto.cod_subproducto 
  AND sbs_ods_producto.Flg_producto ='TC' and  DES_TIPPRODUCTO='LINEA'
- WHERE SBS_FACT_SALDO.COD_PERIODO >=201401
+ WHERE SBS_FACT_SALDO.COD_PERIODO >= @@p_num_24_meses@@ --201401 ----@@p_num_24_meses@@
  GROUP BY SBS_FACT_SALDO.COD_CLIENTE_SBS
  ORDER BY SBS_FACT_SALDO.COD_CLIENTE_SBS;
- 
+
+@@@ 
  --PASO 10 TEMPORAL PARA IDENTIFICAR MTO_SALDO_PMM_MAX_24M   
+
 DROP TABLE TP_DIM_CLI_MTO_SAL_PMM_MAX_24M;
 create table TP_DIM_CLI_MTO_SAL_PMM_MAX_24M
 (
   cod_cliente_sbs NUMERIC(18,2) not null,
   saldo         NUMERIC(18,2)
  );
+
+@@@
+
  INSERT INTO TP_DIM_CLI_MTO_SAL_PMM_MAX_24M
  SELECT SBS_FACT_SALDO.COD_CLIENTE_SBS, MAX(SBS_FACT_SALDO.MTO_SALDO) AS MTO_SALDO
  FROM SBS_FACT_SALDO
  JOIN sbs_ods_producto ON SBS_FACT_SALDO.cod_subproducto = sbs_ods_producto.cod_subproducto 
  AND sbs_ods_producto.Flg_producto IN( 'MED','PEQ','MICRO') and  DES_TIPPRODUCTO='SALDO'
- WHERE SBS_FACT_SALDO.COD_PERIODO >=201401
+ WHERE SBS_FACT_SALDO.COD_PERIODO >= @@p_num_24_meses@@ --201401
  GROUP BY SBS_FACT_SALDO.COD_CLIENTE_SBS
  ORDER BY SBS_FACT_SALDO.COD_CLIENTE_SBS;
  
+@@@
+
  --PASO 11 TEMPORAL PARA IDENTIFICAR EL CAMPO COD_PERIODO_SALDO_PP_MAX_24M
  --DEPENDE DE EL TEMPORAL (8) TP_DIM_CLI_MTO_SAL_PP_MAX_24M
  DROP TABLE TP_DIM_CLI_COD_PER_SAL_PP_MAX_24M;
+
+@@@
+
 create table TP_DIM_CLI_COD_PER_SAL_PP_MAX_24M
 (
   cod_cliente_sbs NUMERIC(18,2) not null,
   PERIODO         NUMERIC(18,2)
  );
+
+@@@
  
  INSERT INTO TP_DIM_CLI_COD_PER_SAL_PP_MAX_24M 
  SELECT SBS_FACT_SALDO.COD_CLIENTE_SBS,SBS_FACT_SALDO.COD_PERIODO FROM SBS_FACT_SALDO
@@ -300,14 +379,21 @@ create table TP_DIM_CLI_COD_PER_SAL_PP_MAX_24M
  JOIN TP_DIM_CLI_MTO_SAL_PP_MAX_24M ON SBS_FACT_SALDO.COD_CLIENTE_SBS||'-'||SBS_FACT_SALDO.MTO_SALDO = TP_DIM_CLI_MTO_SAL_PP_MAX_24M.COD_CLIENTE_SBS||'-'||TP_DIM_CLI_MTO_SAL_PP_MAX_24M.SALDO
 ORDER BY SBS_FACT_SALDO.COD_CLIENTE_SBS;
 
+@@@
+
 --PASO 12 TEMPORAL PARA IDENTIFICAR EL CAMPO COD_PERIODO_LINEATC_MAX_24M 
  --DEPENDE DE EL TEMPORAL (9) TP_DIM_CLI_MTO_LIN_TC_MAX_24M
- DROP TABLE TP_DIM_CLI_COD_PER_LIN_TC_MAX_24M;
+DROP TABLE TP_DIM_CLI_COD_PER_LIN_TC_MAX_24M;
+
+@@@
+
 create table TP_DIM_CLI_COD_PER_LIN_TC_MAX_24M
 (
   cod_cliente_sbs NUMERIC(18,2) not null,
   PERIODO         NUMERIC(18,2)
  );
+
+@@@
  
  INSERT INTO TP_DIM_CLI_COD_PER_LIN_TC_MAX_24M 
  SELECT SBS_FACT_SALDO.COD_CLIENTE_SBS,SBS_FACT_SALDO.COD_PERIODO FROM SBS_FACT_SALDO
@@ -316,14 +402,21 @@ create table TP_DIM_CLI_COD_PER_LIN_TC_MAX_24M
  JOIN TP_DIM_CLI_MTO_LIN_TC_MAX_24M ON SBS_FACT_SALDO.COD_CLIENTE_SBS||'-'||SBS_FACT_SALDO.MTO_SALDO = TP_DIM_CLI_MTO_LIN_TC_MAX_24M.COD_CLIENTE_SBS||'-'||TP_DIM_CLI_MTO_LIN_TC_MAX_24M.SALDO
 ORDER BY SBS_FACT_SALDO.COD_CLIENTE_SBS;
 
+@@@
 --PASO 13 TEMPORAL PARA IDENTIFICAR EL CAMPO COD_PERIODO_PMM_MAX_24M  
  --DEPENDE DE EL TEMPORAL (10) TP_DIM_CLI_MTO_SAL_PMM_MAX_24M
+
  DROP TABLE TP_DIM_CLI_COD_PER_SAL_PMM_MAX_24M;
+
+@@@
+
 create table TP_DIM_CLI_COD_PER_SAL_PMM_MAX_24M
 (
   cod_cliente_sbs NUMERIC(18,2) not null,
   PERIODO         NUMERIC(18,2)
  );
+
+@@@
  
  INSERT INTO TP_DIM_CLI_COD_PER_SAL_PMM_MAX_24M 
  SELECT SBS_FACT_SALDO.COD_CLIENTE_SBS,SBS_FACT_SALDO.COD_PERIODO FROM SBS_FACT_SALDO
@@ -332,9 +425,7 @@ create table TP_DIM_CLI_COD_PER_SAL_PMM_MAX_24M
  JOIN TP_DIM_CLI_MTO_SAL_PMM_MAX_24M ON SBS_FACT_SALDO.COD_CLIENTE_SBS||'-'||SBS_FACT_SALDO.MTO_SALDO = TP_DIM_CLI_MTO_SAL_PMM_MAX_24M.COD_CLIENTE_SBS||'-'||TP_DIM_CLI_MTO_SAL_PMM_MAX_24M.SALDO
 ORDER BY SBS_FACT_SALDO.COD_CLIENTE_SBS;
 
-
-
-***********************
+/*--***********************
 --datos para realizar prueba no aplica al modelo
 select * from sbs_dim_cliente
  INSERT DE PRUEBAS SOBRE SBS_FACT_SALDO
@@ -352,6 +443,8 @@ select * from sbs_dim_cliente
  'CTSTGST',
  201511,
  191100);
+--*********************************+ */
+@@@
 
 CREATE TABLE TP_CLI_RCC_MES AS 
 SELECT min(a.cod_periodo) AS COD_PERIODO_BANCARIZACION,
@@ -365,7 +458,7 @@ GROUP BY , COD_CLIENTE_SBS;
 --PASO final con datos de cliente en el periodo actual SE DEBEN UTILZAR COMO FUENTES LAS TABLAS FACT CLIENTE 
 --Y SALDO
 --IDENTIFICAR CUALES SON LOS QUE NO HAN VENIDO
-
+@@@
 
 INSERT INTO TP_SBS_DIM_CLIENTE  --SE LLENA LA TABLA TEMPORAL, PARA 
 SELECT
@@ -391,7 +484,7 @@ SELECT
     CASE WHEN TP_DIM_CLI_CNT_CPP_3M.CNT_CPPDDP_3M =3 THEN 1 ELSE NULL END, --CNT_CPPDDP_3M
     CASE WHEN TP_DIM_CLI_CNT_DDP_24M.CNT_DDP_24M = 24 THEN 1 ELSE NULL END, --CNT_DDP_24M
     CASE WHEN TP_DIM_CLI_CNT_NOR_12M.CNT_NOR_12M = 12 THEN 1 ELSE NULL END, -- CNT_NOR_12M
-    CASE WHEN TP_DIM_CLI_FLG_GAR.MAXPERIODO = 201601 THEN 1 ELSE NULL END, --FLG_GARANTIA
+    CASE WHEN TP_DIM_CLI_FLG_GAR.MAXPERIODO = @@p_num_11_meses@@ THEN 1 ELSE NULL END, --FLG_GARANTIA- 201601
     CASE WHEN TP_DIM_CLI_FLG_SAL_PMM_24M.CNT_FLG_SAL_PMM_24M =24 THEN 1 ELSE NULL END, --FLG_SALDO_PMM_24M 
     TP_DIM_CLI_MTO_SAL_PP_MAX_24M.SALDO , --MTO_SALDO_PP_MAX_24M 
     TP_DIM_CLI_MTO_LIN_TC_MAX_24M.SALDO, --MTO_LINEATC_MAX_24M 
@@ -422,9 +515,8 @@ SELECT
  LEFT JOIN TP_DIM_CLI_COD_PER_LIN_TC_MAX_24M ON F_CLIENTE.COD_CLIENTE_SBS = TP_DIM_CLI_COD_PER_LIN_TC_MAX_24M.COD_CLIENTE_SBS
  LEFT JOIN TP_DIM_CLI_COD_PER_SAL_PMM_MAX_24M ON F_CLIENTE.COD_CLIENTE_SBS = TP_DIM_CLI_COD_PER_SAL_PMM_MAX_24M.COD_CLIENTE_SBS
  LEFT JOIN TP_CLI_RCC_MES ON F_CLIENTE.COD_CLIENTE_SBS = TP_CLI_RCC_MES.COD_CLIENTE_SBS 
-
-
- AND F_CLIENTE.COD_PERIODO=201601
- AND CLIENTE.COD_PERIODO=201601
+-----
+ AND F_CLIENTE.COD_PERIODO= @@p_num_11_meses@@ --201601
+ AND CLIENTE.COD_PERIODO= @@p_num_11_meses@@ --201601
  
  
