@@ -1,0 +1,116 @@
+﻿codempre,des_entidad,des_alias,tip_entidad,tip_entidad_prop,des_tipcomp,des_tipcomp1,des_tipcomp2,des_tipcomp3,des_tipcomp4
+00001,BANCO DE CREDITO DEL PERU,CREDITO,Banco,Banco,1. Bancos 4TOP,1. Bancos 4TOP,1. Bancos 4TOP,1. Bancos 4TOP,1. Bancos 4TOP
+00002,BANCO INTERNACIONAL DEL PERU,INTERBANK,Banco,Banco,1. Bancos 4TOP,1. Bancos 4TOP,1. Bancos 4TOP,1. Bancos 4TOP,1. Bancos 4TOP
+00003,BANCO POPULAR DEL PERÚ,POPULAR,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00004,SCOTIABANK PERU S A A,SCOTIABANK,Banco,Banco,1. Bancos 4TOP,1. Bancos 4TOP,1. Bancos 4TOP,1. Bancos 4TOP,1. Bancos 4TOP
+00006,B B V A BANCO CONTINENTAL,BBVA CONTINENTAL,Banco,Banco,1. Bancos 4TOP,1. Bancos 4TOP,1. Bancos 4TOP,1. Bancos 4TOP,1. Bancos 4TOP
+00014,MUTUAL CHICLAYO,MUTUAL CHICLAYO,Mutual,Mutual,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00022,BANCO DE COMERCIO,COMERCIO,Banco,Banco,2. Bancos de Consumo,2. Bancos de Consumo,2. Bancos de Consumo,2. Bancos de Consumo,2. Bancos de Consumo
+00025,BANCO REPUBLICA EN LIQUIDACION,REPUBLICA,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00026,BANCO LATINO S A EN LIQUIDACION,LATINO EN LIQUIDAC,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00027,BANCO CCC DEL PERU,CCC DEL PERU,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00052,CITIBANK DEL PERU S A,CITIBANK,Banco,Banco,2. Bancos No Peer,2. Bancos No Peer,2. Bancos No Peer,2. Bancos No Peer,2. Bancos No Peer
+00055,BANCO INTERAMERICANO DE FINANZAS,BANCO INTERAMERICANO,Banco,Banco,2. Bancos No Peer,2. Bancos No Peer,2. Bancos No Peer,2. Bancos No Peer,2. Bancos No Peer
+00061,BANCO DE LA NACION,NACION,Banco,Banco,2. Banco de la Nacion,2. Banco de la Nacion,2. Banco de la Nacion,2. Banco de la Nacion,2. Banco de la Nacion
+00066,BANCO HIPOTECARIO DEL PERU,HIPOTECARIO,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00068,BANCO NUEVO MUNDO,NOVOBANC,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00069,LATINO LEASING,LATINO LEASING,Arrendamiento Financiero,Arrendamiento Financiero,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00072,CREDISCOTIA FINANCIERA S A,CREDISCOTIA,Financiera,Financiera,0. Crediscotia,0. Crediscotia,0. Crediscotia,0. Crediscotia,0. Crediscotia
+00073,BANCO RIPLEY PERU S A,RIPLEY,Banco,Banco,2. Bancos Retail,2. Bancos Retail,2. Bancos Retail,2. Bancos Retail,2. Bancos Retail
+00076,SOLUCIÓN EMPRESA ADMINISTRADORA HIPOTECARIA,SOLUCIÓN ADM HIPOT,Administradora Hipotecaria,Administradora Hipotecaria,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00082,BANCO FINANCIERO DEL PERÚ,FINANCIERO,Banco,Banco,2. Bancos de Consumo,2. Bancos de Consumo,2. Bancos de Consumo,2. Bancos de Consumo,2. Bancos de Consumo
+00099,CORPORACION FINANCIERA DE DESARROLLO S.A.,COFIDE,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00100,AMÉRIKA FINANCIERA S A,AMÉRIKA FINANCIERA,Financiera,Financiera,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00101,CAJA MUNICIPAL DE AHORRO Y CREDITO DE SULLANA S A,CMAC SULLANA,Caja Municipal de Ahorro y Crédito,Caja Municipal de Ahorro y Crédito,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC
+00102,CAJA MUNICIPAL DE CREDITO POPULAR DE LIMA,CMCP LIMA,Caja Municipal de Ahorro y Crédito,Caja Municipal de Ahorro y Crédito,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC
+00103,CAJA MUNICIPAL DE AHORRO Y CREDITO PIURA,CMAC PIURA,Caja Municipal de Ahorro y Crédito,Caja Municipal de Ahorro y Crédito,3. CMAC Piura,3. CMAC Piura,3. CMAC Piura,3. CMAC Piura,3. CMAC Piura
+00104,CAJA MUNICIPAL DE AHORRO Y CREDITO DE AREQUIPA,CMAC AREQUIPA,Caja Municipal de Ahorro y Crédito,Caja Municipal de Ahorro y Crédito,3. CMAC AQP,3. CMAC AQP,3. CMAC AQP,3. CMAC AQP,3. CMAC AQP
+00106,CAJA MUNICIPAL DE AHORRO Y CREDITO CUSCO S A,CMAC CUSCO S A,Caja Municipal de Ahorro y Crédito,Caja Municipal de Ahorro y Crédito,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC
+00107,CAJA MUNICIPAL DE AHORRO Y CREDITO HUANCAYO,CMAC HUANCAYO,Caja Municipal de Ahorro y Crédito,Caja Municipal de Ahorro y Crédito,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC
+00108,CAJA MUNICIPAL DE AHORRO Y CREDITO ICA,CMAC ICA,Caja Municipal de Ahorro y Crédito,Caja Municipal de Ahorro y Crédito,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC
+00109,CAJA MUNICIPAL DE AHORRO Y CREDITO MAYNAS,CMAC MAYNAS,Caja Municipal de Ahorro y Crédito,Caja Municipal de Ahorro y Crédito,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC
+00110,CAJA MUNICIPAL DE AHORRO Y CREDITO PAITA,CMAC PAITA,Caja Municipal de Ahorro y Crédito,Caja Municipal de Ahorro y Crédito,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC
+00111,CAJA MUNICIPAL DE AHORRO Y CREDITO DEL SANTA,CMAC DEL SANTA,Caja Municipal de Ahorro y Crédito,Caja Municipal de Ahorro y Crédito,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC
+00112,CAJA MUNICIPAL DE AHORRO Y CREDITO TRUJILLO,CMAC TRUJILLO,Caja Municipal de Ahorro y Crédito,Caja Municipal de Ahorro y Crédito,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC
+00113,CAJA MUNICIPAL DE AHORRO Y CREDITO PISCO,CMAC PISCO,Caja Municipal de Ahorro y Crédito,Caja Municipal de Ahorro y Crédito,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC
+00114,CAJA MUNICIPAL DE AHORRO Y CREDITO TACNA,CMAC TACNA,Caja Municipal de Ahorro y Crédito,Caja Municipal de Ahorro y Crédito,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC
+00123,MIBANCO BANCO DE LA MICRO EMPRESA S A,MIBANCO,Banco,Banco,2. Mibanco+EDYFicar,2. Mibanco+EDYFicar,2. Mibanco+EDYFicar,2. Mibanco+EDYFicar,2. Mibanco+EDYFicar
+00125,BANCO AGROPECUARIO,AGROBANCO,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00126,HSBC BANK PERU S A,HSBC,Banco,Banco,2. Bancos No Peer,2. Bancos No Peer,2. Bancos No Peer,2. Bancos No Peer,2. Bancos No Peer
+00127,BANCO SANTANDER PERU S A,SANTANDER,Banco,Banco,2. Bancos No Peer,2. Bancos No Peer,2. Bancos No Peer,2. Bancos No Peer,2. Bancos No Peer
+00128,DEUTSCHE BANK PERU S A,DEUTSCHE BANK,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00129,BANCO CENCOSUD S A,CENCOSUD,Banco,Banco,2. Bancos Retail,2. Bancos Retail,2. Bancos Retail,2. Bancos Retail,2. Bancos Retail
+00131,CAJA DE PENSIONES MILITAR POLICIAL,CPMP,Derrama,Derrama,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00140,BANCO AZTECA DEL PERU S A,AZTECA,Banco,Banco,2. Bancos Retail,2. Bancos Retail,2. Bancos Retail,2. Bancos Retail,2. Bancos Retail
+00142,BANCO FALABELLA PERÚ S A,FALABELLA,Banco,Banco,2. Bancos Retail,2. Bancos Retail,2. Bancos Retail,2. Bancos Retail,2. Bancos Retail
+00143,FINANCIERA TFC S A,FINANCIERA TFC S A,Financiera,Financiera,2. Financieras Consumo,2. Financieras Consumo,2. Financieras Consumo,2. Financieras Consumo,2. Financieras Consumo
+00144,FINANCIERA UNIVERSAL S A,FINANCIERA UNIVERSAL,Financiera,Financiera,2. Financieras Consumo,2. Financieras Consumo,2. Financieras Consumo,2. Financieras Consumo,2. Financieras Consumo
+00145,FINANCIERA UNO S A,FINANCIERA UNO S A,Financiera,Financiera,2. Bancos Retail,2. Bancos Retail,2. Bancos Retail,2. Bancos Retail,2. Bancos Retail
+00154,CAJA RURAL DE AHORRO Y CREDITO CREDINKA S A,CREDINKA S A,Caja Rural de Ahorro y Crédito,Caja Rural de Ahorro y Crédito,3. CRAC,3. CRAC,3. CRAC,3. CRAC,3. CRAC
+00156,CAJA RURAL DE AHORRO Y CREDITO CHAVIN S.A.,CHAVIN,Caja Rural de Ahorro y Crédito,Caja Rural de Ahorro y Crédito,3. CRAC,3. CRAC,3. CRAC,3. CRAC,3. CRAC
+00157,CAJA RURAL DE AHORRO Y CREDITO LOS LIBERTADORES DE AYACUCHO,LIBERTADORES AYACUCH,Caja Rural de Ahorro y Crédito,Caja Rural de Ahorro y Crédito,3. CRAC,3. CRAC,3. CRAC,3. CRAC,3. CRAC
+00158,CAJA RURAL DE AHORRO Y CREDITO NUESTRA GENTE S A A,CAJA NUESTRA GENTE,Caja Rural de Ahorro y Crédito,Caja Rural de Ahorro y Crédito,3. CRAC,3. CRAC,3. CRAC,3. CRAC,3. CRAC
+00159,CAJA RURAL DE AHORRO Y CREDITO SEÑOR DE LUREN,SEÑOR DE LUREN,Caja Rural de Ahorro y Crédito,Caja Rural de Ahorro y Crédito,3. CRAC,3. CRAC,3. CRAC,3. CRAC,3. CRAC
+00160,CAJA RURAL DE AHORRO Y CREDITO PROMOTORA DE FINANZAS S A A,PROFINANZAS S A A,Caja Rural de Ahorro y Crédito,Caja Rural de Ahorro y Crédito,3. CRAC,3. CRAC,3. CRAC,3. CRAC,3. CRAC
+00162,CAJA RURAL DE AHORRO Y CREDITO SIPAN S A,CRAC SIPAN S A,Caja Rural de Ahorro y Crédito,Caja Rural de Ahorro y Crédito,3. CRAC,3. CRAC,3. CRAC,3. CRAC,3. CRAC
+00164,CAJA RURAL DE AHORRO Y CREDITO CAJAMARCA S.A.,CAJA CAJAMARCA,Caja Rural de Ahorro y Crédito,Caja Rural de Ahorro y Crédito,3. CRAC,3. CRAC,3. CRAC,3. CRAC,3. CRAC
+00169,CAJA RURAL DE AHORRO Y CREDITO LOS ANDES S A,LOS ANDES,Caja Rural de Ahorro y Crédito,Caja Rural de Ahorro y Crédito,3. CRAC,3. CRAC,3. CRAC,3. CRAC,3. CRAC
+00170,PRODUCTOS Y MERCADOS AGRICOLAS DE HUARAL CAJA RURAL DE A Y C,CRAC PRYMERA,Caja Rural de Ahorro y Crédito,Caja Rural de Ahorro y Crédito,3. CRAC,3. CRAC,3. CRAC,3. CRAC,3. CRAC
+00171,CAJA RURAL DE AHORRO Y CREDITO INCASUR S A,CRAC INCASUR,Caja Rural de Ahorro y Crédito,Caja Rural de Ahorro y Crédito,3. CRAC,3. CRAC,3. CRAC,3. CRAC,3. CRAC
+00184,LEASING TOTAL S A,LEASING TOTAL,Arrendamiento Financiero,Arrendamiento Financiero,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00185,MITSUI MASA LEASING S A,MITSUI MASA,Arrendamiento Financiero,Arrendamiento Financiero,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00186,BANCO INTERAMERICANO DE FINANZAS VENTA DE CARTERA,BIF VENTA DE CARTERA,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00191,BANCO FINANCIERO DEL PERU VENTA DE CARTERA,B FINANCIERO VTA CAR,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00195,CONTINENTAL - MEF,CONTI-MEF,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00216,FONDO MIVIVIENDA S A,FONDO MIVIVIENDA,Fondo,Fondo,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00220,FUNDACION FONDO DE GARANTIA PARA PRESTAMOS A LA PEQUEÑA INDUSTRIA,FOGAPI,Afianzadora y de Garantías,Afianzadora y de Garantías,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00223,EDPYME CREDIJET DEL PERU S A,EDPYME CREDIJET,EDPYME,EDPYME,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme
+00226,EMPRESA FINANCIERA EDYFICAR S A,FINANCIERA EDYFICAR,Financiera,Financiera,2. Mibanco+EDYFicar,2. Mibanco+EDYFicar,2. Mibanco+EDYFicar,2. Mibanco+EDYFicar,2. Mibanco+EDYFicar
+00227,EDPYME PROEMPRESA S A,EDPYME PROEMPRESA,EDPYME,EDPYME,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme
+00228,EMPRESA FINANCIERA CREDITOS AREQUIPA S A - FINANCIERA CREAR,FINANCIERA CREAR,Financiera,Financiera,2. Financieras MES,2. Financieras MES,2. Financieras MES,2. Financieras MES,2. Financieras MES
+00230,EDPYME NUEVA VISION S A,EDPYME NUEVA VISION,EDPYME,EDPYME,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme
+00231,EMPRESA FINANCIERA CONFIANZA S A - FINANCIERA CONFIANZA,FINANCIERA CONFIANZA,Financiera,Financiera,2. Financieras MES,2. Financieras MES,2. Financieras MES,2. Financieras MES,2. Financieras MES
+00232,EDPYME RAIZ S A,EDPYME RAIZ,EDPYME,EDPYME,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme
+00234,EDPYME SOLIDARIDAD Y DESARROLLO EMPRESARIAL S A C,EDPYME SOLIDARIDAD,EDPYME,EDPYME,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme
+00235,EDPYME CREDIVISION S A,EDPYME CREDIVISION,EDPYME,EDPYME,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme
+00236,EDPYME ACCESO CREDITICIO SOCIEDAD ANONIMA,ACCESO CREDITICIO,EDPYME,EDPYME,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme
+00237,FINANCIERA EFECTIVA S A,FINANCIERA EFECTIVA,Financiera,Financiera,2. Financieras Consumo,2. Financieras Consumo,2. Financieras Consumo,2. Financieras Consumo,2. Financieras Consumo
+00238,EDPYME ALTERNATIVA S A,EDPYME ALTERNATIVA,EDPYME,EDPYME,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme
+00239,EDPYME DEL FOMENTO DEL COMERCIO Y LA PRODUCCION S A,EDPYME PRO NEGOCIOS,EDPYME,EDPYME,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme
+00240,EDPYME MICASITA S A,EDPYME MICASITA S A,EDPYME,EDPYME,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme
+00248,EDPYME INVERSIONES LA CRUZ,INV. LA CRUZ,EDPYME,EDPYME,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme
+00249,INCASA EMPRESA ADMINISTRADORA HIPOTECARIA,INCASA ADM HIPOT,Administradora Hipotecaria,Administradora Hipotecaria,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00267,AMERICA FACTORING S A,AMERICA FACTORING,Factoring,Factoring,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00273,BANCO DE COMERCIO RES 1114 99 TRANS DE CARTERA A INVERSIONES BCO DE COMERCIO,B COMINVCOM,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00278,BANCO WIESE SUDAMERIS VENTA DE CARTERA,B WIESE SUD VTA CART,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00301,BANCO INTERNACIONAL DEL PERU VENTA DE CARTERA,INTERBANK VTA CART,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00316,BANCO FINANCIERO CARTERA EN FIDEICOMISO 1 NBK,FINAN FIDEI 1 NBK,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00317,BANCO DE CREDITO DEL PERU CARTERA VENDIDA TRANSF EMP SOLUCIONES EN PROCESAMIENTO,B CRED 1114 SERVICOR,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00330,BANCO DE CREDITO DEL PERU TITULIZACION SANTANDER OFICIO 6914 2000,B CRED TITULI OF6914,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00339,BANCO WIESE PATRIMONIO FIDEICOMETIDO EN GARANTIA - BWS 2003,WIESE FID GTIA SUDAM,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00342,BANCO CONTINENTAL VENTA DE CARTERA A INMUEBLES Y RECUPERACIONES CONTINENTAL S A,CONTIN V C INM RECUP,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00345,FINANCIERA CMR FIDEICOMISO DE CREDITITULOS SOCIEDAD TITULIZADORA S A,FIN CMR CRED SOC TIT,Financiera,Financiera,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00346,BANCO DE CREDITO CARTERA ADQUIRIDA DE FIN DE CREDITO A CORESA,CRED C A FINAN CORES,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00348,CMAC HUANCAYO CARTERA ADMINISTRADA DE CRAC SELVA CENTRAL,CM HCYO CART SEL CEN,Caja Municipal de Ahorro y Crédito,Caja Municipal de Ahorro y Crédito,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC,3. Otras CMAC
+00352,AGROBANCO CARTERA DE CREDITOS DE FONDOS ROTATORIOS DEL MINISTERIO DE AGRICULTURA,AGRO FON ROT MIN AGR,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00353,PATRIMONIO EN FIDEICOMISO BANCO WIESE LTDO 1999-01,BWS TITULIZADORA 1,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00354,PATRIMONIO EN FIDEICOMISO BANCO WIESE SUDAMERIS 1999-02,BWS TITULIZADORA 2,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00355,PATRIMONIO EN FIDEICOMISO BWS 2002-04,BWS TITULIZADORA 4,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00356,ADMINISTRADORA DEL COMERCIO SA,ADMINCOMER,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00358,CAJA RURAL LOS ANDES CARTERA EN FIDEICOMISO,CRAC ANDES CART FIDE,Caja Rural de Ahorro y Crédito,Caja Rural de Ahorro y Crédito,3. CRAC,3. CRAC,3. CRAC,3. CRAC,3. CRAC
+00361,BANCO NUEVO MUNDO EN LIQUIDACION PATRIMONIO AUTONOMO,NVO MUNDO LQ PAT AUT,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00364,BANCO CONTINENTAL SOCIEDAD TITULIZADORA - FIDUCIARIA,B CONTIN SOC TIT FID,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00365,PATRIMONIO FIDEICOMETIDO SCOTIABANK C C LA MARINA 2007 DS 093-2002-EF TIT XI,PAT FID SCOT DS 093,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00366,CAJA DE PENSIONES MILITAR POLICIAL VENTA DE CARTERA A ADMINISTRADORA DE COMERCIO,CPMP V C ADMDORA COM,Derrama,Derrama,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00368,BWS TITULIZADORA 2 TRANSFERENCIA A SCI,BWS TIT 2 TRANSF SCI,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00369,BWS FIDEICOMISO EN GARANTIA BANCO SUDAMERICANO TRANSFERENCIA A SCI,BWS FID GTIA TR SCI,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00370,MIBANCO TRANSFERENCIA DE CARTERA A CONECTA CENTRO DE CONTACTO S A,MIBANCO TRA CONECTA,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00372,INTERBANK VENTA DE CARTERA A SIGMA SAFI,INTERB VC SIGMA SAFI,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00373,AGROBANCO AGRO FONDOS AGROPERU,AGROB FONDO AGROPERU,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00374,CARTERA ENDOSADA POR INCASA A INVITA SEGUROS DE VIDA,INCASA ENDOSO INVITA,Administradora Hipotecaria,Administradora Hipotecaria,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00375,INTERBANK PATRIMONIO EN FIDEICOMISO DS 093-2002-EF TITULO XI 2009-TPUSD E-1,INTER PAT FID DS 093,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00376,CREDISCOTIA VTA DE CARTERA CASTIGADA A SCI,CREDISCOTIA VTA SCI,Financiera,Financiera,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00378,EDPYME ACCESO CREDITICIO TRANSFEREN DE CART ACCESO CREDITICIO DE LA AMAZONIA 1,ACC CRED TRAN ACLA 1,EDPYME,EDPYME,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme
+00379,EDPYME ACCESO CREDITICIO TRANSFEREN DE CART ACCESO CREDITICIO DE LA AMAZONIA 2,ACC CRED TRAN ACLA 2,EDPYME,EDPYME,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme,3. EDPyme
+00380,BANCO DE CREDITO FIDEICOMISO DE TITULIZACION HIPOTECARIA,B CRED TITULI HIP,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
+00381,BANCO FINANCIERO CARTERA CREDITICIA A RECAUDO COBRANZA Y RECUPERACIONES S A C,FINAN CART A RECAUDO,Banco,Banco,4. Otros,4. Otros,4. Otros,4. Otros,4. Otros
